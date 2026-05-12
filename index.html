@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head><meta charset="UTF-8">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="max-image-preview:large">
+<title>AGS – Geospatial Intelligence with AI</title>
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link rel="alternate" type="application/rss+xml" title="AGS » Feed" href="https://mashahzad.github.io/AGSwebsite/feed/">
+<link rel="alternate" type="application/rss+xml" title="AGS » Comments Feed" href="https://mashahzad.github.io/AGSwebsite/comments/feed/">
+<style id="wp-img-auto-sizes-contain-inline-css">
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<style id="wp-block-paragraph-inline-css">
+.is-small-text{font-size:.875em}.is-regular-text{font-size:1em}.is-large-text{font-size:2.25em}.is-larger-text{font-size:3em}.has-drop-cap:not(:focus):first-letter{float:left;font-size:8.4em;font-style:normal;font-weight:100;line-height:.68;margin:.05em .1em 0 0;text-transform:uppercase}body.rtl .has-drop-cap:not(:focus):first-letter{float:none;margin-left:.1em}p.has-drop-cap.has-background{overflow:hidden}:root :where(p.has-background){padding:1.25em 2.375em}:where(p.has-text-color:not(.has-link-color)) a{color:inherit}p.has-text-align-left[style*="writing-mode:vertical-lr"],p.has-text-align-right[style*="writing-mode:vertical-rl"]{rotate:180deg}
+/*# sourceURL=https://mashahzad.github.io/AGSwebsite/wp-includes/blocks/paragraph/style.min.css */
+</style>
+<style id="wp-emoji-styles-inline-css">
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+/*# sourceURL=wp-emoji-styles-inline-css */
+</style>
+<style id="wp-block-library-inline-css">
+:root{--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223;--wp-bound-block-color:var(--wp-block-synced-color);--wp-editor-canvas-background:#ddd;--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,160.5;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px}@media (min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root .has-very-light-gray-background-color{background-color:#eee}:root .has-very-dark-gray-background-color{background-color:#313131}:root .has-very-light-gray-color{color:#eee}:root .has-very-dark-gray-color{color:#313131}:root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background{background:linear-gradient(135deg,#00d084,#0693e3)}:root .has-purple-crush-gradient-background{background:linear-gradient(135deg,#34e2e4,#4721fb 50%,#ab1dfe)}:root .has-hazy-dawn-gradient-background{background:linear-gradient(135deg,#faaca8,#dad0ec)}:root .has-subdued-olive-gradient-background{background:linear-gradient(135deg,#fafae1,#67a671)}:root .has-atomic-cream-gradient-background{background:linear-gradient(135deg,#fdd79a,#004a59)}:root .has-nightshade-gradient-background{background:linear-gradient(135deg,#330968,#31cdcf)}:root .has-midnight-gradient-background{background:linear-gradient(135deg,#020381,#2874fc)}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}.has-regular-font-size{font-size:1em}.has-larger-font-size{font-size:2.625em}.has-normal-font-size{font-size:var(--wp--preset--font-size--normal)}.has-huge-font-size{font-size:var(--wp--preset--font-size--huge)}.has-text-align-center{text-align:center}.has-text-align-left{text-align:left}.has-text-align-right{text-align:right}.has-fit-text{white-space:nowrap!important}#end-resizable-editor-section{display:none}.aligncenter{clear:both}.items-justified-left{justify-content:flex-start}.items-justified-center{justify-content:center}.items-justified-right{justify-content:flex-end}.items-justified-space-between{justify-content:space-between}.screen-reader-text{border:0;clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;word-wrap:normal!important}.screen-reader-text:focus{background-color:#ddd;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}html :where(.has-border-color){border-style:solid}html :where([style*=border-top-color]){border-top-style:solid}html :where([style*=border-right-color]){border-right-style:solid}html :where([style*=border-bottom-color]){border-bottom-style:solid}html :where([style*=border-left-color]){border-left-style:solid}html :where([style*=border-width]){border-style:solid}html :where([style*=border-top-width]){border-top-style:solid}html :where([style*=border-right-width]){border-right-style:solid}html :where([style*=border-bottom-width]){border-bottom-style:solid}html :where([style*=border-left-width]){border-left-style:solid}html :where(img[class*=wp-image-]){height:auto;max-width:100%}:where(figure){margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}
+.wp-block-template-part{margin-block-start:0;margin-block-end:0;}
+/*# sourceURL=wp-block-library-inline-css */
+</style>
+<link rel="stylesheet" id="unibiz-style-css" href="https://mashahzad.github.io/AGSwebsite/wp-content/themes/unibiz/style.css?ver=1.0.8" media="all">
+<link rel="stylesheet" id="preset-css" href="https://mashahzad.github.io/AGSwebsite/wp-content/themes/unibiz//assets/css/preset.css?ver=1.0.8" media="all">
+<style id="global-styles-inline-css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--gv-color-primary: #7722ff;--wp--preset--color--gv-color-secondary: #5d16da;--wp--preset--color--gv-color-text-primary: #011222;--wp--preset--color--gv-color-text-secondary: #01122299;--wp--preset--color--gv-color-text-placeholder: #01122266;--wp--preset--color--gv-color-accent: #7722ff;--wp--preset--color--gv-color-accent-hover: #5d16da;--wp--preset--color--gv-color-background-primary: #011222;--wp--preset--color--gv-color-background-secondary: #f7f4ff;--wp--preset--color--gv-color-background-tertiary: #f1e9ff;--wp--preset--color--gv-color-border: #e4eaf4;--wp--preset--color--gv-color-border-input: #f7f9fc;--wp--preset--color--gv-color-white: #ffffff;--wp--preset--color--gv-color-dark-primary: #7722ff;--wp--preset--color--gv-color-dark-secondary: #5d16da;--wp--preset--color--gv-color-dark-text-primary: #ffffff;--wp--preset--color--gv-color-dark-text-secondary: #ffffff99;--wp--preset--color--gv-color-dark-text-placeholder: #ffffff66;--wp--preset--color--gv-color-dark-accent: #7722ff;--wp--preset--color--gv-color-dark-accent-hover: #5d16da;--wp--preset--color--gv-color-dark-background-primary: #011222;--wp--preset--color--gv-color-dark-background-secondary: #0b1b2b;--wp--preset--color--gv-color-dark-background-tertiary: #1a2a38;--wp--preset--color--gv-color-dark-border: #ffffff26;--wp--preset--color--gv-color-dark-border-input: #1f2d3c;--wp--preset--color--gv-color-black: #000000;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: clamp(0.875rem, 0.875rem + ((1vw - 0.2rem) * 0.156), 1rem);--wp--preset--font-size--medium: clamp(1rem, 1rem + ((1vw - 0.2rem) * 0.156), 1.125rem);--wp--preset--font-size--large: clamp(1.75rem, 1.75rem + ((1vw - 0.2rem) * 0.156), 1.875rem);--wp--preset--font-size--x-large: 42px;--wp--preset--font-size--extra-large: 2.25rem;--wp--preset--font-size--massive: clamp(160px, 13.889vw, 200px);--wp--preset--font-size--gigantic: clamp(48px, 5vw, 72px);--wp--preset--font-size--mega: clamp(40px, 3.611vw, 52px);--wp--preset--font-size--jumbo: clamp(32px, 3.333vw, 48px);--wp--preset--font-size--largest: clamp(26px, 2.222vw, 32px);--wp--preset--font-size--big: clamp(22px, 1.805vw, 26px);--wp--preset--font-size--standard: clamp(20px, 1.666vw, 24px);--wp--preset--font-size--normal: clamp(16px, 1.25vw, 18px);--wp--preset--font-size--tiny: clamp(14px, 1.111vw, 16px);--wp--preset--font-size--little: clamp(12, 1.228vw, 14px);--wp--preset--font-size--mini: clamp(12px, 1.05vw, 12px);--wp--preset--font-size--huge: clamp(48px, 4.166vw, 60px);--wp--preset--font-family--host-grotesk: Host Grotesk;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);--wp--custom--headings--typography--font-family: var(--wp--preset--font-family--primary);}:root { --wp--style--global--content-size: 100vw;--wp--style--global--wide-size: 100vw; }:where(body) { margin: 0; }.wp-site-blocks > .alignleft { float: left; margin-right: 2em; }.wp-site-blocks > .alignright { float: right; margin-left: 2em; }.wp-site-blocks > .aligncenter { justify-content: center; margin-left: auto; margin-right: auto; }:where(.wp-site-blocks) > * { margin-block-start: 1.2rem; margin-block-end: 0; }:where(.wp-site-blocks) > :first-child { margin-block-start: 0; }:where(.wp-site-blocks) > :last-child { margin-block-end: 0; }:root { --wp--style--block-gap: 1.2rem; }:root :where(.is-layout-flow) > :first-child{margin-block-start: 0;}:root :where(.is-layout-flow) > :last-child{margin-block-end: 0;}:root :where(.is-layout-flow) > *{margin-block-start: 1.2rem;margin-block-end: 0;}:root :where(.is-layout-constrained) > :first-child{margin-block-start: 0;}:root :where(.is-layout-constrained) > :last-child{margin-block-end: 0;}:root :where(.is-layout-constrained) > *{margin-block-start: 1.2rem;margin-block-end: 0;}:root :where(.is-layout-flex){gap: 1.2rem;}:root :where(.is-layout-grid){gap: 1.2rem;}.is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}.is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}.is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}.is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}.is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{color: var(--wp--preset--color--gv-color-text-secondary);padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}a:where(:not(.wp-element-button)){color: var(--wp--preset--color--gv-color-primary);text-decoration: underline;}:root :where(a:where(:not(.wp-element-button)):hover){color: var(--wp--preset--color--gv-color-secondary);}h1, h2, h3, h4, h5, h6{color: var(--wp--preset--color--gv-color-text-primary);}:root :where(.wp-element-button, .wp-block-button__link){background-color: var(--wp--preset--color--gv-color-primary);border-width: 0;color: var(--wp--preset--color--white);font-family: inherit;font-size: inherit;font-style: inherit;font-weight: inherit;letter-spacing: inherit;line-height: inherit;padding-top: calc(0.667em + 2px);padding-right: calc(1.333em + 2px);padding-bottom: calc(0.667em + 2px);padding-left: calc(1.333em + 2px);text-decoration: none;text-transform: inherit;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-gv-color-primary-color{color: var(--wp--preset--color--gv-color-primary) !important;}.has-gv-color-secondary-color{color: var(--wp--preset--color--gv-color-secondary) !important;}.has-gv-color-text-primary-color{color: var(--wp--preset--color--gv-color-text-primary) !important;}.has-gv-color-text-secondary-color{color: var(--wp--preset--color--gv-color-text-secondary) !important;}.has-gv-color-text-placeholder-color{color: var(--wp--preset--color--gv-color-text-placeholder) !important;}.has-gv-color-accent-color{color: var(--wp--preset--color--gv-color-accent) !important;}.has-gv-color-accent-hover-color{color: var(--wp--preset--color--gv-color-accent-hover) !important;}.has-gv-color-background-primary-color{color: var(--wp--preset--color--gv-color-background-primary) !important;}.has-gv-color-background-secondary-color{color: var(--wp--preset--color--gv-color-background-secondary) !important;}.has-gv-color-background-tertiary-color{color: var(--wp--preset--color--gv-color-background-tertiary) !important;}.has-gv-color-border-color{color: var(--wp--preset--color--gv-color-border) !important;}.has-gv-color-border-input-color{color: var(--wp--preset--color--gv-color-border-input) !important;}.has-gv-color-white-color{color: var(--wp--preset--color--gv-color-white) !important;}.has-gv-color-dark-primary-color{color: var(--wp--preset--color--gv-color-dark-primary) !important;}.has-gv-color-dark-secondary-color{color: var(--wp--preset--color--gv-color-dark-secondary) !important;}.has-gv-color-dark-text-primary-color{color: var(--wp--preset--color--gv-color-dark-text-primary) !important;}.has-gv-color-dark-text-secondary-color{color: var(--wp--preset--color--gv-color-dark-text-secondary) !important;}.has-gv-color-dark-text-placeholder-color{color: var(--wp--preset--color--gv-color-dark-text-placeholder) !important;}.has-gv-color-dark-accent-color{color: var(--wp--preset--color--gv-color-dark-accent) !important;}.has-gv-color-dark-accent-hover-color{color: var(--wp--preset--color--gv-color-dark-accent-hover) !important;}.has-gv-color-dark-background-primary-color{color: var(--wp--preset--color--gv-color-dark-background-primary) !important;}.has-gv-color-dark-background-secondary-color{color: var(--wp--preset--color--gv-color-dark-background-secondary) !important;}.has-gv-color-dark-background-tertiary-color{color: var(--wp--preset--color--gv-color-dark-background-tertiary) !important;}.has-gv-color-dark-border-color{color: var(--wp--preset--color--gv-color-dark-border) !important;}.has-gv-color-dark-border-input-color{color: var(--wp--preset--color--gv-color-dark-border-input) !important;}.has-gv-color-black-color{color: var(--wp--preset--color--gv-color-black) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-gv-color-primary-background-color{background-color: var(--wp--preset--color--gv-color-primary) !important;}.has-gv-color-secondary-background-color{background-color: var(--wp--preset--color--gv-color-secondary) !important;}.has-gv-color-text-primary-background-color{background-color: var(--wp--preset--color--gv-color-text-primary) !important;}.has-gv-color-text-secondary-background-color{background-color: var(--wp--preset--color--gv-color-text-secondary) !important;}.has-gv-color-text-placeholder-background-color{background-color: var(--wp--preset--color--gv-color-text-placeholder) !important;}.has-gv-color-accent-background-color{background-color: var(--wp--preset--color--gv-color-accent) !important;}.has-gv-color-accent-hover-background-color{background-color: var(--wp--preset--color--gv-color-accent-hover) !important;}.has-gv-color-background-primary-background-color{background-color: var(--wp--preset--color--gv-color-background-primary) !important;}.has-gv-color-background-secondary-background-color{background-color: var(--wp--preset--color--gv-color-background-secondary) !important;}.has-gv-color-background-tertiary-background-color{background-color: var(--wp--preset--color--gv-color-background-tertiary) !important;}.has-gv-color-border-background-color{background-color: var(--wp--preset--color--gv-color-border) !important;}.has-gv-color-border-input-background-color{background-color: var(--wp--preset--color--gv-color-border-input) !important;}.has-gv-color-white-background-color{background-color: var(--wp--preset--color--gv-color-white) !important;}.has-gv-color-dark-primary-background-color{background-color: var(--wp--preset--color--gv-color-dark-primary) !important;}.has-gv-color-dark-secondary-background-color{background-color: var(--wp--preset--color--gv-color-dark-secondary) !important;}.has-gv-color-dark-text-primary-background-color{background-color: var(--wp--preset--color--gv-color-dark-text-primary) !important;}.has-gv-color-dark-text-secondary-background-color{background-color: var(--wp--preset--color--gv-color-dark-text-secondary) !important;}.has-gv-color-dark-text-placeholder-background-color{background-color: var(--wp--preset--color--gv-color-dark-text-placeholder) !important;}.has-gv-color-dark-accent-background-color{background-color: var(--wp--preset--color--gv-color-dark-accent) !important;}.has-gv-color-dark-accent-hover-background-color{background-color: var(--wp--preset--color--gv-color-dark-accent-hover) !important;}.has-gv-color-dark-background-primary-background-color{background-color: var(--wp--preset--color--gv-color-dark-background-primary) !important;}.has-gv-color-dark-background-secondary-background-color{background-color: var(--wp--preset--color--gv-color-dark-background-secondary) !important;}.has-gv-color-dark-background-tertiary-background-color{background-color: var(--wp--preset--color--gv-color-dark-background-tertiary) !important;}.has-gv-color-dark-border-background-color{background-color: var(--wp--preset--color--gv-color-dark-border) !important;}.has-gv-color-dark-border-input-background-color{background-color: var(--wp--preset--color--gv-color-dark-border-input) !important;}.has-gv-color-black-background-color{background-color: var(--wp--preset--color--gv-color-black) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-gv-color-primary-border-color{border-color: var(--wp--preset--color--gv-color-primary) !important;}.has-gv-color-secondary-border-color{border-color: var(--wp--preset--color--gv-color-secondary) !important;}.has-gv-color-text-primary-border-color{border-color: var(--wp--preset--color--gv-color-text-primary) !important;}.has-gv-color-text-secondary-border-color{border-color: var(--wp--preset--color--gv-color-text-secondary) !important;}.has-gv-color-text-placeholder-border-color{border-color: var(--wp--preset--color--gv-color-text-placeholder) !important;}.has-gv-color-accent-border-color{border-color: var(--wp--preset--color--gv-color-accent) !important;}.has-gv-color-accent-hover-border-color{border-color: var(--wp--preset--color--gv-color-accent-hover) !important;}.has-gv-color-background-primary-border-color{border-color: var(--wp--preset--color--gv-color-background-primary) !important;}.has-gv-color-background-secondary-border-color{border-color: var(--wp--preset--color--gv-color-background-secondary) !important;}.has-gv-color-background-tertiary-border-color{border-color: var(--wp--preset--color--gv-color-background-tertiary) !important;}.has-gv-color-border-border-color{border-color: var(--wp--preset--color--gv-color-border) !important;}.has-gv-color-border-input-border-color{border-color: var(--wp--preset--color--gv-color-border-input) !important;}.has-gv-color-white-border-color{border-color: var(--wp--preset--color--gv-color-white) !important;}.has-gv-color-dark-primary-border-color{border-color: var(--wp--preset--color--gv-color-dark-primary) !important;}.has-gv-color-dark-secondary-border-color{border-color: var(--wp--preset--color--gv-color-dark-secondary) !important;}.has-gv-color-dark-text-primary-border-color{border-color: var(--wp--preset--color--gv-color-dark-text-primary) !important;}.has-gv-color-dark-text-secondary-border-color{border-color: var(--wp--preset--color--gv-color-dark-text-secondary) !important;}.has-gv-color-dark-text-placeholder-border-color{border-color: var(--wp--preset--color--gv-color-dark-text-placeholder) !important;}.has-gv-color-dark-accent-border-color{border-color: var(--wp--preset--color--gv-color-dark-accent) !important;}.has-gv-color-dark-accent-hover-border-color{border-color: var(--wp--preset--color--gv-color-dark-accent-hover) !important;}.has-gv-color-dark-background-primary-border-color{border-color: var(--wp--preset--color--gv-color-dark-background-primary) !important;}.has-gv-color-dark-background-secondary-border-color{border-color: var(--wp--preset--color--gv-color-dark-background-secondary) !important;}.has-gv-color-dark-background-tertiary-border-color{border-color: var(--wp--preset--color--gv-color-dark-background-tertiary) !important;}.has-gv-color-dark-border-border-color{border-color: var(--wp--preset--color--gv-color-dark-border) !important;}.has-gv-color-dark-border-input-border-color{border-color: var(--wp--preset--color--gv-color-dark-border-input) !important;}.has-gv-color-black-border-color{border-color: var(--wp--preset--color--gv-color-black) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}.has-extra-large-font-size{font-size: var(--wp--preset--font-size--extra-large) !important;}.has-massive-font-size{font-size: var(--wp--preset--font-size--massive) !important;}.has-gigantic-font-size{font-size: var(--wp--preset--font-size--gigantic) !important;}.has-mega-font-size{font-size: var(--wp--preset--font-size--mega) !important;}.has-jumbo-font-size{font-size: var(--wp--preset--font-size--jumbo) !important;}.has-largest-font-size{font-size: var(--wp--preset--font-size--largest) !important;}.has-big-font-size{font-size: var(--wp--preset--font-size--big) !important;}.has-standard-font-size{font-size: var(--wp--preset--font-size--standard) !important;}.has-normal-font-size{font-size: var(--wp--preset--font-size--normal) !important;}.has-tiny-font-size{font-size: var(--wp--preset--font-size--tiny) !important;}.has-little-font-size{font-size: var(--wp--preset--font-size--little) !important;}.has-mini-font-size{font-size: var(--wp--preset--font-size--mini) !important;}.has-huge-font-size{font-size: var(--wp--preset--font-size--huge) !important;}.has-host-grotesk-font-family{font-family: var(--wp--preset--font-family--host-grotesk) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+<style id="wp-block-template-skip-link-inline-css">
+
+		.skip-link.screen-reader-text {
+			border: 0;
+			clip-path: inset(50%);
+			height: 1px;
+			margin: -1px;
+			overflow: hidden;
+			padding: 0;
+			position: absolute !important;
+			width: 1px;
+			word-wrap: normal !important;
+		}
+
+		.skip-link.screen-reader-text:focus {
+			background-color: #eee;
+			clip-path: none;
+			color: #444;
+			display: block;
+			font-size: 1em;
+			height: auto;
+			left: 5px;
+			line-height: normal;
+			padding: 15px 23px 14px;
+			text-decoration: none;
+			top: 5px;
+			width: auto;
+			z-index: 100000;
+		}
+/*# sourceURL=wp-block-template-skip-link-inline-css */
+</style>
+<link rel="stylesheet" id="gutenverse-frontend-css" href="https://mashahzad.github.io/AGSwebsite/wp-content/plugins/gutenverse/assets/css/frontend.css?ver=3.6.3" media="all">
+<link rel="stylesheet" id="gutenverse-frontend-button-style-css" href="https://mashahzad.github.io/AGSwebsite/wp-content/plugins/gutenverse/assets/css/frontend/button.css?ver=3.6.3" media="all">
+<link rel="stylesheet" id="gutenverse-frontend-fun-fact-style-css" href="https://mashahzad.github.io/AGSwebsite/wp-content/plugins/gutenverse/assets/css/frontend/fun-fact.css?ver=3.6.3" media="all">
+<link rel="stylesheet" id="gutenverse-frontend-heading-style-css" href="https://mashahzad.github.io/AGSwebsite/wp-content/plugins/gutenverse/assets/css/frontend/heading.css?ver=3.6.3" media="all">
+<link rel="stylesheet" id="gutenverse-frontend-icon-box-style-css" href="https://mashahzad.github.io/AGSwebsite/wp-content/plugins/gutenverse/assets/css/frontend/icon-box.css?ver=3.6.3" media="all">
+<link rel="stylesheet" id="gutenverse-frontend-icon-list-style-css" href="https://mashahzad.github.io/AGSwebsite/wp-content/plugins/gutenverse/assets/css/frontend/icon-list.css?ver=3.6.3" media="all">
+<link rel="stylesheet" id="gutenverse-frontend-icon-list-item-style-css" href="https://mashahzad.github.io/AGSwebsite/wp-content/plugins/gutenverse/assets/css/frontend/icon-list-item.css?ver=3.6.3" media="all">
+<link rel="stylesheet" id="gutenverse-frontend-image-style-css" href="https://mashahzad.github.io/AGSwebsite/wp-content/plugins/gutenverse/assets/css/frontend/image.css?ver=3.6.3" media="all">
+<link rel="stylesheet" id="gutenverse-frontend-logo-slider-style-css" href="https://mashahzad.github.io/AGSwebsite/wp-content/plugins/gutenverse/assets/css/frontend/logo-slider.css?ver=3.6.3" media="all">
+<link rel="stylesheet" id="gutenverse-frontend-nav-menu-style-css" href="https://mashahzad.github.io/AGSwebsite/wp-content/plugins/gutenverse/assets/css/frontend/nav-menu.css?ver=3.6.3" media="all">
+<link rel="stylesheet" id="gutenverse-frontend-post-block-style-css" href="https://mashahzad.github.io/AGSwebsite/wp-content/plugins/gutenverse/assets/css/frontend/post-block.css?ver=3.6.3" media="all">
+<link rel="stylesheet" id="gutenverse-frontend-social-icons-style-css" href="https://mashahzad.github.io/AGSwebsite/wp-content/plugins/gutenverse/assets/css/frontend/social-icons.css?ver=3.6.3" media="all">
+<link rel="stylesheet" id="gutenverse-frontend-social-icon-style-css" href="https://mashahzad.github.io/AGSwebsite/wp-content/plugins/gutenverse/assets/css/frontend/social-icon.css?ver=3.6.3" media="all">
+<link rel="stylesheet" id="gutenverse-frontend-spacer-style-css" href="https://mashahzad.github.io/AGSwebsite/wp-content/plugins/gutenverse/assets/css/frontend/spacer.css?ver=3.6.3" media="all">
+<link rel="stylesheet" id="gutenverse-frontend-testimonials-style-css" href="https://mashahzad.github.io/AGSwebsite/wp-content/plugins/gutenverse/assets/css/frontend/testimonials.css?ver=3.6.3" media="all">
+<link rel="stylesheet" id="gutenverse-frontend-text-editor-style-css" href="https://mashahzad.github.io/AGSwebsite/wp-content/plugins/gutenverse/assets/css/frontend/text-editor.css?ver=3.6.3" media="all">
+<link rel="stylesheet" id="gutenverse-core-frontend-column-style-css" href="https://mashahzad.github.io/AGSwebsite/wp-content/plugins/gutenverse/lib/framework/assets/css/frontend/column.css?ver=2.6.3" media="all">
+<link rel="stylesheet" id="gutenverse-core-frontend-section-style-css" href="https://mashahzad.github.io/AGSwebsite/wp-content/plugins/gutenverse/lib/framework/assets/css/frontend/section.css?ver=2.6.3" media="all">
+<link rel="stylesheet" id="gutenverse-core-frontend-wrapper-style-css" href="https://mashahzad.github.io/AGSwebsite/wp-content/plugins/gutenverse/lib/framework/assets/css/frontend/wrapper.css?ver=2.6.3" media="all">
+<link rel="stylesheet" id="gutenverse-frontend-style-css" href="https://mashahzad.github.io/AGSwebsite/wp-content/plugins/gutenverse/lib/framework/assets/css/frontend.css?ver=2.6.3" media="all">
+<style id="gutenverse-frontend-style-inline-css">
+:root {
+            --guten-screen-xs-max: 767px;
+            --guten-screen-sm-min: 768px;
+            --guten-screen-sm-max: 1024px;
+            --guten-screen-md-min: 1025px; 
+        } body { --gutenverse-font-family-gv-font-primary:"Host Grotesk";--gutenverse-font-size-gv-font-primary:64px;--gutenverse-font-weight-gv-font-primary:700;--gutenverse-font-lineHeight-gv-font-primary:1.125em;--gutenverse-font-spacing-gv-font-primary:-0.02em;--gutenverse-font-family-gv-font-primary-alt:"Host Grotesk";--gutenverse-font-size-gv-font-primary-alt:52px;--gutenverse-font-weight-gv-font-primary-alt:600;--gutenverse-font-lineHeight-gv-font-primary-alt:1.15em;--gutenverse-font-spacing-gv-font-primary-alt:-0.02em;--gutenverse-font-family-gv-font-secondary:"Host Grotesk";--gutenverse-font-size-gv-font-secondary:48px;--gutenverse-font-weight-gv-font-secondary:700;--gutenverse-font-lineHeight-gv-font-secondary:1.25em;--gutenverse-font-spacing-gv-font-secondary:-0.02em;--gutenverse-font-family-gv-font-secondary-alt:"Host Grotesk";--gutenverse-font-size-gv-font-secondary-alt:38px;--gutenverse-font-weight-gv-font-secondary-alt:700;--gutenverse-font-lineHeight-gv-font-secondary-alt:1.3em;--gutenverse-font-family-gv-font-feature:"Host Grotesk";--gutenverse-font-size-gv-font-feature:26px;--gutenverse-font-weight-gv-font-feature:700;--gutenverse-font-lineHeight-gv-font-feature:1.15em;--gutenverse-font-family-gv-font-feature-alt:"Host Grotesk";--gutenverse-font-size-gv-font-feature-alt:40px;--gutenverse-font-weight-gv-font-feature-alt:700;--gutenverse-font-lineHeight-gv-font-feature-alt:1.2em;--gutenverse-font-family-gv-font-feature-secondary:"Host Grotesk";--gutenverse-font-size-gv-font-feature-secondary:22px;--gutenverse-font-weight-gv-font-feature-secondary:700;--gutenverse-font-lineHeight-gv-font-feature-secondary:1.1em;--gutenverse-font-family-gv-font-feature-secondary-alt:"Host Grotesk";--gutenverse-font-size-gv-font-feature-secondary-alt:32px;--gutenverse-font-weight-gv-font-feature-secondary-alt:500;--gutenverse-font-lineHeight-gv-font-feature-secondary-alt:1.2em;--gutenverse-font-family-gv-font-meta:"Host Grotesk";--gutenverse-font-size-gv-font-meta:14px;--gutenverse-font-weight-gv-font-meta:600;--gutenverse-font-lineHeight-gv-font-meta:1.2em;--gutenverse-font-family-gv-font-meta-alt:"Host Grotesk";--gutenverse-font-size-gv-font-meta-alt:24px;--gutenverse-font-weight-gv-font-meta-alt:500;--gutenverse-font-lineHeight-gv-font-meta-alt:1.2em;--gutenverse-font-family-gv-font-subheading:"Host Grotesk";--gutenverse-font-size-gv-font-subheading:12px;--gutenverse-font-weight-gv-font-subheading:600;--gutenverse-font-transform-gv-font-subheading:uppercase;--gutenverse-font-lineHeight-gv-font-subheading:1.3em;--gutenverse-font-spacing-gv-font-subheading:0.05em;--gutenverse-font-family-gv-font-text-hero:"Host Grotesk";--gutenverse-font-size-gv-font-text-hero:18px;--gutenverse-font-weight-gv-font-text-hero:400;--gutenverse-font-lineHeight-gv-font-text-hero:1.6em;--gutenverse-font-family-gv-font-text-hero-alt:"Host Grotesk";--gutenverse-font-size-gv-font-text-hero-alt:18px;--gutenverse-font-weight-gv-font-text-hero-alt:500;--gutenverse-font-lineHeight-gv-font-text-hero-alt:1em;--gutenverse-font-family-gv-font-text:"Host Grotesk";--gutenverse-font-size-gv-font-text:16px;--gutenverse-font-weight-gv-font-text:400;--gutenverse-font-lineHeight-gv-font-text:1.5em;--gutenverse-font-family-gv-font-text-small:"Host Grotesk";--gutenverse-font-size-gv-font-text-small:14px;--gutenverse-font-weight-gv-font-text-small:400;--gutenverse-font-lineHeight-gv-font-text-small:1.4em;--gutenverse-font-family-gv-font-text-small-alt:"Host Grotesk";--gutenverse-font-size-gv-font-text-small-alt:12px;--gutenverse-font-weight-gv-font-text-small-alt:400;--gutenverse-font-lineHeight-gv-font-text-small-alt:1em;--gutenverse-font-family-gv-font-button-primary:"Host Grotesk";--gutenverse-font-size-gv-font-button-primary:16px;--gutenverse-font-weight-gv-font-button-primary:600;--gutenverse-font-lineHeight-gv-font-button-primary:1.5em;--gutenverse-font-family-gv-font-button-secondary:"Host Grotesk";--gutenverse-font-size-gv-font-button-secondary:15px;--gutenverse-font-weight-gv-font-button-secondary:500;--gutenverse-font-lineHeight-gv-font-button-secondary:1em;--gutenverse-font-family-gv-font-form-label:"Host Grotesk";--gutenverse-font-size-gv-font-form-label:15px;--gutenverse-font-weight-gv-font-form-label:400;--gutenverse-font-lineHeight-gv-font-form-label:1em;--gutenverse-font-family-gv-font-heading-404:"Host Grotesk";--gutenverse-font-size-gv-font-heading-404:200px;--gutenverse-font-weight-gv-font-heading-404:500;--gutenverse-font-lineHeight-gv-font-heading-404:1em; } 
+				@media only screen and (max-width: 1024px) { body {}}
+				@media only screen and (max-width: 767px) { body {--gutenverse-font-size-gv-font-primary:42px;--gutenverse-font-size-gv-font-primary-alt:32px;--gutenverse-font-size-gv-font-secondary:32px;--gutenverse-font-size-gv-font-secondary-alt:20px;--gutenverse-font-size-gv-font-feature:22px;--gutenverse-font-size-gv-font-feature-alt:32px;--gutenverse-font-size-gv-font-feature-secondary:18px;--gutenverse-font-size-gv-font-meta:12px;--gutenverse-font-size-gv-font-text-hero:16px;--gutenverse-font-size-gv-font-text:14px;--gutenverse-font-size-gv-font-text-small:12px;--gutenverse-font-size-gv-font-button-primary:14px;--gutenverse-font-size-gv-font-button-secondary:13px;--gutenverse-font-size-gv-font-form-label:13px;--gutenverse-font-size-gv-font-heading-404:120px;}}  
+/*# sourceURL=gutenverse-frontend-style-inline-css */
+</style>
+<link rel="stylesheet" id="gutenverse-generated-template-css" href="https://mashahzad.github.io/AGSwebsite/wp-content/uploads/gutenverse/css/gutenverse-template-home-273708.css?ver=273708" media="all">
+<link rel="stylesheet" id="gutenverse-google-font-css" href="https://fonts.googleapis.com/css?family=Host+Grotesk%3A400%2C400italic%2C700%2C700italic%2C600%2C500&amp;display=swap&amp;ver=2.6.3" media="all">
+<link rel="stylesheet" id="fontawesome-gutenverse-css" href="https://mashahzad.github.io/AGSwebsite/wp-content/plugins/gutenverse/lib/framework/assets/fonts/fontawesome/css/all.min.css?ver=2.6.3" media="all">
+<link rel="stylesheet" id="gutenverse-iconlist-css" href="https://mashahzad.github.io/AGSwebsite/wp-content/plugins/gutenverse/lib/framework/assets/fonts/gtnicon/gtnicon.css?ver=2.6.3" media="all">
+<link rel="stylesheet" id="gutenverse-frontend-icon-css" href="https://mashahzad.github.io/AGSwebsite/wp-content/plugins/gutenverse/lib/framework/assets/dist/frontend-icon.css?ver=2.6.3" media="all">
+<link rel="https://api.w.org/" href="https://mashahzad.github.io/AGSwebsite/wp-json/"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://mashahzad.github.io/AGSwebsite/xmlrpc.php?rsd">
+<meta name="generator" content="WordPress 6.9.4">
+<style class="wp-fonts-local">
+@font-face{font-family:"Host Grotesk";font-style:normal;font-weight:300;font-display:fallback;src:url('https://mashahzad.github.io/AGSwebsite/wp-content/themes/unibiz/assets/fonts/host-grotesk/HostGrotesk-Light.ttf') format('truetype');}
+@font-face{font-family:"Host Grotesk";font-style:normal;font-weight:400;font-display:fallback;src:url('https://mashahzad.github.io/AGSwebsite/wp-content/themes/unibiz/assets/fonts/host-grotesk/HostGrotesk-Regular.ttf') format('truetype');}
+@font-face{font-family:"Host Grotesk";font-style:normal;font-weight:500;font-display:fallback;src:url('https://mashahzad.github.io/AGSwebsite/wp-content/themes/unibiz/assets/fonts/host-grotesk/HostGrotesk-Medium.ttf') format('truetype');}
+@font-face{font-family:"Host Grotesk";font-style:normal;font-weight:600;font-display:fallback;src:url('https://mashahzad.github.io/AGSwebsite/wp-content/themes/unibiz/assets/fonts/host-grotesk/HostGrotesk-SemiBold.ttf') format('truetype');}
+@font-face{font-family:"Host Grotesk";font-style:normal;font-weight:700;font-display:fallback;src:url('https://mashahzad.github.io/AGSwebsite/wp-content/themes/unibiz/assets/fonts/host-grotesk/HostGrotesk-Bold.ttf') format('truetype');}
+@font-face{font-family:"Host Grotesk";font-style:normal;font-weight:800;font-display:fallback;src:url('https://mashahzad.github.io/AGSwebsite/wp-content/themes/unibiz/assets/fonts/host-grotesk/HostGrotesk-ExtraBold.ttf') format('truetype');}
+@font-face{font-family:"Host Grotesk";font-style:italic;font-weight:300;font-display:fallback;src:url('https://mashahzad.github.io/AGSwebsite/wp-content/themes/unibiz/assets/fonts/host-grotesk/HostGrotesk-LightItalic.ttf') format('truetype');}
+@font-face{font-family:"Host Grotesk";font-style:italic;font-weight:400;font-display:fallback;src:url('https://mashahzad.github.io/AGSwebsite/wp-content/themes/unibiz/assets/fonts/host-grotesk/HostGrotesk-Italic.ttf') format('truetype');}
+@font-face{font-family:"Host Grotesk";font-style:italic;font-weight:500;font-display:fallback;src:url('https://mashahzad.github.io/AGSwebsite/wp-content/themes/unibiz/assets/fonts/host-grotesk/HostGrotesk-MediumItalic.ttf') format('truetype');}
+@font-face{font-family:"Host Grotesk";font-style:italic;font-weight:600;font-display:fallback;src:url('https://mashahzad.github.io/AGSwebsite/wp-content/themes/unibiz/assets/fonts/host-grotesk/HostGrotesk-SemiBoldItalic.ttf') format('truetype');}
+@font-face{font-family:"Host Grotesk";font-style:italic;font-weight:700;font-display:fallback;src:url('https://mashahzad.github.io/AGSwebsite/wp-content/themes/unibiz/assets/fonts/host-grotesk/HostGrotesk-BoldItalic.ttf') format('truetype');}
+@font-face{font-family:"Host Grotesk";font-style:italic;font-weight:800;font-display:fallback;src:url('https://mashahzad.github.io/AGSwebsite/wp-content/themes/unibiz/assets/fonts/host-grotesk/HostGrotesk-ExtraBoldItalic.ttf') format('truetype');}
+</style>
+<link rel="icon" href="https://mashahzad.github.io/AGSwebsite/wp-content/uploads/2026/05/cropped-1739371913829-32x32.png" sizes="32x32">
+<link rel="icon" href="https://mashahzad.github.io/AGSwebsite/wp-content/uploads/2026/05/cropped-1739371913829-192x192.png" sizes="192x192">
+<link rel="apple-touch-icon" href="https://mashahzad.github.io/AGSwebsite/wp-content/uploads/2026/05/cropped-1739371913829-180x180.png">
+<meta name="msapplication-TileImage" content="https://mashahzad.github.io/AGSwebsite/wp-content/uploads/2026/05/cropped-1739371913829-270x270.png">
+</head>
+
+<body class="home blog wp-embed-responsive wp-theme-unibiz">
+
+<div class="wp-site-blocks"><div class="wp-block-template-part"><div class="section-wrapper" data-id="9tL4YZ"><section class="wp-block-gutenverse-section guten-element guten-section guten-9tL4YZ layout-fullwidth align-stretch"><div class="guten-container guten-column-gap-no">
+<div class="wp-block-gutenverse-column guten-element guten-column guten-YadAkl"><div class="guten-column-wrapper" data-id="YadAkl">
+<div class="wp-block-gutenverse-image guten-element guten-image guten-NuTS1A"><a class="guten-image-wrapper" href="http://ags-sg.com/" target="_self"><img decoding="async" class="gutenverse-image-box-filled" src="https://mashahzad.github.io/AGSwebsite/wp-content/uploads/2026/05/1739371867874.png" width="561" height="207"></a></div>
+
+<div class="wp-block-gutenverse-wrapper guten-element guten-wrap-helper no-margin guten-LkjBkR  inline"><div class="guten-inner-wrap" data-id="LkjBkR">
+<div id="guten-xgASDL" class="guten-element guten-nav-menu nav-menu break-point-tablet submenu-click-title " data-item-indicator="gtn gtn-chevron-down-line" data-item-indicator-type="icon" data-item-indicator-svg="" data-close-on-click="1" aria-label="">
+			<div class="gutenverse-hamburger-wrapper">
+				<button class="gutenverse-hamburger-menu" aria-label="">
+				<i aria-hidden="true" class="gtn gtn-bars-solid"></i>
+				</button>
+			</div>
+			<div class="guten-nav-overlay"></div>
+			<div class="gutenverse-menu-wrapper"><div class="gutenverse-menu-container"><ul id="menu-menu-1" class="gutenverse-menu"><li id="menu-item-19" class="menu-item-19  menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-home"><a href="https://mashahzad.github.io/AGSwebsite/" aria-label="Home">Home</a></li>
+<li id="menu-item-20" class="menu-item-20  menu-item menu-item-type-post_type menu-item-object-page"><a href="https://mashahzad.github.io/AGSwebsite/discover/" aria-label="Discover AGS">Discover AGS</a></li>
+<li id="menu-item-22" class="menu-item-22  menu-item menu-item-type-post_type menu-item-object-page"><a href="https://mashahzad.github.io/AGSwebsite/solutions/" aria-label="Solutions">Solutions</a></li>
+<li id="menu-item-21" class="menu-item-21  menu-item menu-item-type-post_type menu-item-object-page"><a href="https://mashahzad.github.io/AGSwebsite/careers/" aria-label="Careers">Careers</a></li>
+</ul></div>
+				<div>
+					<div class="gutenverse-nav-identity-panel">
+						<div class="gutenverse-nav-site-title">
+							<a aria-label="" href="https://mashahzad.github.io/AGSwebsite/" class="gutenverse-nav-logo"><img decoding="async" loading="eager" src="https://mashahzad.github.io/AGSwebsite/wp-content/themes/unibiz/assets/img/unibiz-logo-footer.png" alt="AGS - Geospatial Intelligence with AI" width="258" height="74"></a>
+						</div>
+						<button class="gutenverse-close-menu" aria-label=""><i aria-hidden="true" class="gtn gtn-times-solid"></i></button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+<div class="guten-element guten-social-icons guten-NFIxuJ rounded horizontal fill">
+<div class="guten-element guten-social-icon guten-WNh9pa linkedin"><a id="guten-WNh9pa" href="https://www.linkedin.com/company/ags-sg-info/" target="_blank" rel="noreferrer noopener"><i aria-hidden="true" class="fab fa-linkedin"></i></a></div>
+
+<div class="guten-element guten-social-icon guten-ADSQeJ twitter"><a id="guten-ADSQeJ" href="http://x.com/" target="_blank" rel="noreferrer noopener"><i aria-hidden="true" class="fab fa-x-twitter"></i></a></div>
+
+<div class="guten-element guten-social-icon guten-AUbqmD default"><a id="guten-AUbqmD" href="https://www.ags-sg.com/" target="_blank" rel="noreferrer noopener"><i aria-hidden="true" class="fas fa-globe"></i></a></div>
+</div>
+</div></div>
+</div></div>
+</div></section></div></div>
+
+<div class="section-wrapper" data-id="6TULi4"><section class="wp-block-gutenverse-section guten-element guten-section guten-6TULi4 layout-fullwidth align-stretch"><div class="guten-container guten-column-gap-no">
+<div class="wp-block-gutenverse-column guten-element guten-column guten-vxuGpS"><div class="guten-column-wrapper" data-id="vxuGpS">
+<h6 class="wp-block-gutenverse-heading guten-element guten-BszoNm">👋 Hi! We are AGS!</h6>
+
+<div class="wp-block-gutenverse-wrapper guten-element guten-wrap-helper no-margin guten-wRsOis  flex"><div class="guten-inner-wrap" data-id="wRsOis">
+<h1 class="wp-block-gutenverse-heading guten-element guten-OqOF44">Built a Strong Online Presence Business</h1>
+
+<div class="wp-block-gutenverse-wrapper guten-element guten-wrap-helper no-margin guten-wypnuY"><div class="guten-inner-wrap" data-id="wypnuY">
+<div class="guten-element gutenverse-text-editor guten-Xl88Zs"><div class="text-content-inner">
+
+<p>Build any website you want for business, portfolio, blogging, or freelancer, faster and lighter using just one theme.</p>
+
+</div></div>
+</div></div>
+
+<div class="guten-element guten-button-wrapper guten-8rU2Xy"><a class="guten-button guten-button-sm" href="https://mashahzad.github.io/AGSwebsite/discover/"><span>Get Started Now</span></a></div>
+</div></div>
+</div></div>
+
+<div class="wp-block-gutenverse-column guten-element guten-column guten-mPsb0o"><div class="guten-column-wrapper" data-id="mPsb0o"><div class="guten-background-overlay"></div>
+<div class="wp-block-gutenverse-spacer guten-element guten-spacer guten-OZZnBP"></div>
+</div></div>
+</div></section></div>
+
+<div class="section-wrapper" data-id="Z6fnKc"><section class="wp-block-gutenverse-section guten-element guten-section guten-Z6fnKc layout-boxed align-stretch"><div class="guten-container guten-column-gap-no">
+<div class="wp-block-gutenverse-column guten-element guten-column guten-tkkVLR animated guten-element-hide desktop-fadeIn"><div class="guten-column-wrapper" data-id="tkkVLR">
+<div class="guten-element guten-uszZik     guten-icon-box icon-position-top"><div class="guten-icon-box-wrapper hover-from-left"><a class="" href="#" target="" rel=""><div class="icon-box icon-box-header">
+					<div class="icon bg-style-gradient">
+						<i class="gtn gtn-suitcase-1-light icon-style-gradient"></i>
+					</div>
+				</div></a><div class="icon-box icon-box-body"><a class="" href="#" target="" rel=""><h3 class="title">Business</h3></a><a class="" href="#" target="" rel=""><p class="icon-box-description">Create a professional presence with layouts built for companies and agencies, perfect for showcasing services &amp; attracting clients.</p></a></div></div></div>
+</div></div>
+
+<div class="wp-block-gutenverse-column guten-element guten-column guten-BvdjH6 animated guten-element-hide desktop-fadeIn"><div class="guten-column-wrapper" data-id="BvdjH6">
+<div class="guten-element guten-SckJgy     guten-icon-box icon-position-top"><div class="guten-icon-box-wrapper hover-from-left"><a class="" href="#" target="" rel=""><div class="icon-box icon-box-header">
+					<div class="icon bg-style-gradient">
+						<i class="gtn gtn-pencil_art-light icon-style-gradient"></i>
+					</div>
+				</div></a><div class="icon-box icon-box-body"><a class="" href="#" target="" rel=""><h3 class="title">Portfolio</h3></a><a class="" href="#" target="" rel=""><p class="icon-box-description">Present your work with clean, modern, and visually focused layouts made for designers, creators, and professionals.</p></a></div></div></div>
+</div></div>
+
+<div class="wp-block-gutenverse-column guten-element guten-column guten-qU0LY6 animated guten-element-hide desktop-fadeIn"><div class="guten-column-wrapper" data-id="qU0LY6">
+<div class="guten-element guten-VRx1xg     guten-icon-box icon-position-top"><div class="guten-icon-box-wrapper hover-from-left"><a class="" href="#" target="" rel=""><div class="icon-box icon-box-header">
+					<div class="icon bg-style-gradient">
+						<i class="gtn gtn-file-text-line icon-style-gradient"></i>
+					</div>
+				</div></a><div class="icon-box icon-box-body"><a class="" href="#" target="" rel=""><h3 class="title">Blogging</h3></a><a class="" href="#" target="" rel=""><p class="icon-box-description">Share your ideas with clean, readable blog layouts designed for effortless writing and beautiful storytelling.</p></a></div></div></div>
+</div></div>
+</div></section></div>
+
+<div class="section-wrapper" data-id="9jxaJR"><section class="wp-block-gutenverse-section guten-element guten-section guten-9jxaJR layout-boxed align-stretch"><div class="guten-container guten-column-gap-no">
+<div class="wp-block-gutenverse-column guten-element guten-column guten-vgtvtf"><div class="guten-column-wrapper" data-id="vgtvtf">
+<h2 class="wp-block-gutenverse-heading guten-element guten-Z05ltj  animated guten-element-hide desktop-fadeIn">Our Clients Trust Us We Deliver Results</h2>
+
+<div class="section-wrapper" data-id="Yz9Qki"><section class="wp-block-gutenverse-section guten-element guten-section guten-Yz9Qki animated guten-element-hide desktop-fadeIn layout-fullwidth align-stretch"><div class="guten-container guten-column-gap-no">
+<div class="wp-block-gutenverse-column guten-element guten-column guten-3t0Iif"><div class="guten-column-wrapper" data-id="3t0Iif">
+<div class="guten-element guten-PZKOEh     guten-icon-box icon-position-top"><div class="guten-icon-box-wrapper hover-from-left"><div class="icon-box icon-box-header">
+					<div class="icon bg-style-color type-image">
+						<img src="https://mashahzad.github.io/AGSwebsite/wp-content/themes/unibiz/assets/img/unibiz-benefits-1.webp" alt="image-creative" loading="lazy">
+					</div>
+				</div><div class="icon-box icon-box-body"><h3 class="title">Creative Solutions</h3><p class="icon-box-description">We approach every challenge with fresh ideas that to meet your goals.</p></div></div></div>
+</div></div>
+
+<div class="wp-block-gutenverse-column guten-element guten-column guten-W7moDg"><div class="guten-column-wrapper" data-id="W7moDg">
+<div class="guten-element guten-sStiPD     guten-icon-box icon-position-top"><div class="guten-icon-box-wrapper hover-from-left"><div class="icon-box icon-box-header">
+					<div class="icon bg-style-color type-image">
+						<img src="https://mashahzad.github.io/AGSwebsite/wp-content/themes/unibiz/assets/img/unibiz-benefits-2.webp" alt="image-design" loading="lazy">
+					</div>
+				</div><div class="icon-box icon-box-body"><h3 class="title">Smart Design</h3><p class="icon-box-description">Our layouts are seamlessly crafted by balancing the visual and usability.</p></div></div></div>
+</div></div>
+</div></section></div>
+
+<div class="section-wrapper" data-id="2X6ay4"><section class="wp-block-gutenverse-section guten-element guten-section guten-2X6ay4 animated guten-element-hide desktop-fadeIn layout-fullwidth align-stretch"><div class="guten-container guten-column-gap-no">
+<div class="wp-block-gutenverse-column guten-element guten-column guten-I5uAbc"><div class="guten-column-wrapper" data-id="I5uAbc">
+<div class="guten-element guten-WGCFJ0     guten-icon-box icon-position-top"><div class="guten-icon-box-wrapper hover-from-left"><div class="icon-box icon-box-header">
+					<div class="icon bg-style-color type-image">
+						<img src="https://mashahzad.github.io/AGSwebsite/wp-content/themes/unibiz/assets/img/unibiz-benefits-3.webp" alt="image-feature" loading="lazy">
+					</div>
+				</div><div class="icon-box icon-box-body"><h3 class="title">Solid Feature</h3><p class="icon-box-description">Built with performance, every feature is reliable, practical, and ready to scale.</p></div></div></div>
+</div></div>
+
+<div class="wp-block-gutenverse-column guten-element guten-column guten-K9OGED"><div class="guten-column-wrapper" data-id="K9OGED">
+<div class="guten-element guten-hd9MpP     guten-icon-box icon-position-top"><div class="guten-icon-box-wrapper hover-from-left"><div class="icon-box icon-box-header">
+					<div class="icon bg-style-color type-image">
+						<img src="https://mashahzad.github.io/AGSwebsite/wp-content/themes/unibiz/assets/img/unibiz-benefits-4.webp" alt="image-support" loading="lazy">
+					</div>
+				</div><div class="icon-box icon-box-body"><h3 class="title">Dedicated Support</h3><p class="icon-box-description">Dedicated friendly help from our team that’s committed to your success.</p></div></div></div>
+</div></div>
+</div></section></div>
+</div></div>
+
+<div class="wp-block-gutenverse-column guten-element guten-column guten-9XDKun animated guten-element-hide desktop-fadeIn"><div class="guten-column-wrapper" data-id="9XDKun">
+<div class="wp-block-gutenverse-image guten-element guten-image guten-cgNwTM"><div class="guten-image-wrapper"><img class="gutenverse-image-box-filled" src="https://mashahzad.github.io/AGSwebsite/wp-content/themes/unibiz/assets/img/unibiz-benefits-img.webp" alt="" width="1012" height="1088" loading="lazy"></div></div>
+</div></div>
+</div></section></div>
+
+<div class="section-wrapper" data-id="JLCPkz"><section class="wp-block-gutenverse-section guten-element guten-section guten-JLCPkz layout-boxed align-stretch"><div class="guten-container guten-column-gap-no">
+<div class="wp-block-gutenverse-column guten-element guten-column guten-ksyQgQ"><div class="guten-column-wrapper" data-id="ksyQgQ">
+<div class="section-wrapper" data-id="07M9xB"><section class="wp-block-gutenverse-section guten-element guten-section guten-07M9xB layout-fullwidth align-stretch"><div class="guten-container guten-column-gap-no">
+<div class="wp-block-gutenverse-column guten-element guten-column guten-i2a7Dy"><div class="guten-column-wrapper" data-id="i2a7Dy">
+<h2 class="wp-block-gutenverse-heading guten-element guten-pmS1Sx  animated guten-element-hide desktop-fadeIn">World-Class Service That Helps You Grow</h2>
+</div></div>
+
+<div class="wp-block-gutenverse-column guten-element guten-column guten-TZXYWP"><div class="guten-column-wrapper" data-id="TZXYWP">
+<div class="guten-element gutenverse-text-editor guten-w13VL9  animated guten-element-hide desktop-fadeIn"><div class="text-content-inner">
+
+<p>From strategy to execution, our services are designed to support your growth at every stage. We deliver reliable, high quality solutions that meet to your business needs.</p>
+
+</div></div>
+</div></div>
+</div></section></div>
+</div></div>
+
+<div class="wp-block-gutenverse-column guten-element guten-column guten-95NRcF"><div class="guten-column-wrapper" data-id="95NRcF">
+<div class="section-wrapper" data-id="fo5VKk"><section class="wp-block-gutenverse-section guten-element guten-section guten-fo5VKk layout-fullwidth align-stretch"><div class="guten-container guten-column-gap-no">
+<div class="wp-block-gutenverse-column guten-element guten-column guten-YwVUir animated guten-element-hide desktop-fadeIn"><div class="guten-column-wrapper" data-id="YwVUir">
+<div class="wp-block-gutenverse-wrapper guten-element guten-wrap-helper no-margin guten-bzS3rK"><div class="guten-inner-wrap" data-id="bzS3rK">
+<div class="wp-block-gutenverse-image guten-element guten-image guten-63O54x"><div class="guten-image-wrapper"><img class="gutenverse-image-box-filled" src="https://mashahzad.github.io/AGSwebsite/wp-content/themes/unibiz/assets/img/unibiz-services-1-img.webp" alt="" width="758" height="566" loading="lazy"></div></div>
+
+<div class="guten-element guten-PdVnGi     guten-icon-box icon-position-top"><div class="guten-icon-box-wrapper hover-from-left"><div class="icon-box icon-box-body"><h3 class="title">Web Design</h3><p class="icon-box-description">Crafting visually striking and user friendly designs that elevate your online presence.</p></div></div></div>
+</div></div>
+</div></div>
+
+<div class="wp-block-gutenverse-column guten-element guten-column guten-r1t7EY animated guten-element-hide desktop-fadeIn"><div class="guten-column-wrapper" data-id="r1t7EY">
+<div class="wp-block-gutenverse-wrapper guten-element guten-wrap-helper no-margin guten-YZKI50"><div class="guten-inner-wrap" data-id="YZKI50">
+<div class="wp-block-gutenverse-image guten-element guten-image guten-iokWIL"><div class="guten-image-wrapper"><img class="gutenverse-image-box-filled" src="https://mashahzad.github.io/AGSwebsite/wp-content/themes/unibiz/assets/img/unibiz-services-2-img.webp" alt="" width="756" height="566" loading="lazy"></div></div>
+
+<div class="guten-element guten-WNJoub     guten-icon-box icon-position-top"><div class="guten-icon-box-wrapper hover-from-left"><div class="icon-box icon-box-body"><h3 class="title">Digital Marketing</h3><p class="icon-box-description">Driving growth through data-driven strategies that connect you with the right audience.</p></div></div></div>
+</div></div>
+</div></div>
+
+<div class="wp-block-gutenverse-column guten-element guten-column guten-GqBddM animated guten-element-hide desktop-fadeIn"><div class="guten-column-wrapper" data-id="GqBddM">
+<div class="wp-block-gutenverse-wrapper guten-element guten-wrap-helper no-margin guten-9xYXc8"><div class="guten-inner-wrap" data-id="9xYXc8">
+<div class="wp-block-gutenverse-image guten-element guten-image guten-b64LcR"><div class="guten-image-wrapper"><img class="gutenverse-image-box-filled" src="https://mashahzad.github.io/AGSwebsite/wp-content/themes/unibiz/assets/img/unibiz-services-3-img.webp" alt="" width="758" height="566" loading="lazy"></div></div>
+
+<div class="guten-element guten-C3He4E     guten-icon-box icon-position-top"><div class="guten-icon-box-wrapper hover-from-left"><div class="icon-box icon-box-body"><h3 class="title">Web Development</h3><p class="icon-box-description">We develop your website fast, secure, and scalable that match to your business goals.</p></div></div></div>
+</div></div>
+</div></div>
+</div></section></div>
+</div></div>
+</div></section></div>
+
+<div class="section-wrapper" data-id="nnWPq8"><section class="wp-block-gutenverse-section guten-element guten-section guten-nnWPq8 layout-boxed align-stretch"><div class="guten-container guten-column-gap-no">
+<div class="wp-block-gutenverse-column guten-element guten-column guten-vCq1U3"><div class="guten-column-wrapper" data-id="vCq1U3">
+<div class="guten-element gutenverse-text-editor guten-eA5zSm  animated guten-element-hide desktop-fadeIn"><div class="text-content-inner">
+
+<p>Trusted by <a href="#">4,000+</a> leading companies</p>
+
+</div></div>
+
+<div class="guten-element guten-client-logo grid-desktop-3 guten-fJQGOl  animated guten-element-hide desktop-fadeIn     arrow-bottom-edge">
+			<div class="client-list">
+				<div id="guten-fJQGOl" class="swiper-container" data-loop="true" data-autoplay="true" data-timeout="3200" data-breakpoints="{&quot;0&quot;:{&quot;spaceBetween&quot;:32,&quot;slidesPerView&quot;:3},&quot;768&quot;:{&quot;spaceBetween&quot;:48,&quot;slidesPerView&quot;:4},&quot;1024&quot;:{&quot;spaceBetween&quot;:64,&quot;slidesPerView&quot;:5}}">
+					<div class="swiper-wrapper">
+						<div class="image-list swiper-slide"><div class="content-image"><img class="main-image" src="https://mashahzad.github.io/AGSwebsite/wp-content/themes/unibiz/assets/img/client-logo-unibiz-1.webp" alt="One" loading="lazy"><img class="hover-image" src="https://mashahzad.github.io/AGSwebsite/wp-content/themes/unibiz/assets/img/client-logo-unibiz-1.webp" alt="One" loading="lazy"></div></div><div class="image-list swiper-slide"><div class="content-image"><img class="main-image" src="https://mashahzad.github.io/AGSwebsite/wp-content/themes/unibiz/assets/img/client-logo-unibiz-2.webp" alt="Two" loading="lazy"><img class="hover-image" src="https://mashahzad.github.io/AGSwebsite/wp-content/themes/unibiz/assets/img/client-logo-unibiz-2.webp" alt="Two" loading="lazy"></div></div><div class="image-list swiper-slide"><div class="content-image"><img class="main-image" src="https://mashahzad.github.io/AGSwebsite/wp-content/themes/unibiz/assets/img/client-logo-unibiz-3.webp" alt="Three" loading="lazy"><img class="hover-image" src="https://mashahzad.github.io/AGSwebsite/wp-content/themes/unibiz/assets/img/client-logo-unibiz-3.webp" alt="Three" loading="lazy"></div></div><div class="image-list swiper-slide"><div class="content-image"><img class="main-image" src="https://mashahzad.github.io/AGSwebsite/wp-content/themes/unibiz/assets/img/client-logo-unibiz-4.webp" alt="Four" loading="lazy"><img class="hover-image" src="https://mashahzad.github.io/AGSwebsite/wp-content/themes/unibiz/assets/img/client-logo-unibiz-4.webp" alt="Four" loading="lazy"></div></div><div class="image-list swiper-slide"><div class="content-image"><img class="main-image" src="https://mashahzad.github.io/AGSwebsite/wp-content/themes/unibiz/assets/img/client-logo-unibiz-5.webp" alt="Six" loading="lazy"><img class="hover-image" src="https://mashahzad.github.io/AGSwebsite/wp-content/themes/unibiz/assets/img/client-logo-unibiz-5.webp" alt="Six" loading="lazy"></div></div><div class="image-list swiper-slide"><div class="content-image"><img class="main-image" src="https://mashahzad.github.io/AGSwebsite/wp-content/themes/unibiz/assets/img/client-logo-unibiz-6.webp" alt="Five" loading="lazy"><img class="hover-image" src="https://mashahzad.github.io/AGSwebsite/wp-content/themes/unibiz/assets/img/client-logo-unibiz-6.webp" alt="Five" loading="lazy"></div></div>
+					</div>
+					
+					
+				</div>
+			</div></div>
+
+<div class="wp-block-gutenverse-spacer guten-element guten-spacer guten-KcxFPa  animated guten-element-hide desktop-fadeIn"></div>
+</div></div>
+</div></section></div>
+
+<div class="section-wrapper" data-id="bTwfgr"><section class="wp-block-gutenverse-section guten-element guten-section guten-bTwfgr layout-boxed align-stretch"><div class="guten-container guten-column-gap-no">
+<div class="wp-block-gutenverse-column guten-element guten-column guten-R4P7ix animated guten-element-hide desktop-fadeIn"><div class="guten-column-wrapper" data-id="R4P7ix">
+<div class="wp-block-gutenverse-image guten-element guten-image guten-b5wGqI"><div class="guten-image-wrapper"><img class="gutenverse-image-box-filled" src="https://mashahzad.github.io/AGSwebsite/wp-content/themes/unibiz/assets/img/unibiz-statistics-e1755584861696.webp" alt="" width="1228" height="1003" loading="lazy"></div></div>
+</div></div>
+
+<div class="wp-block-gutenverse-column guten-element guten-column guten-wZ3TYl"><div class="guten-column-wrapper" data-id="wZ3TYl">
+<h2 class="wp-block-gutenverse-heading guten-element guten-M2xFpt  animated guten-element-hide desktop-fadeIn">We Dedicate Our Time To Deliver Great Results</h2>
+
+<div class="guten-element gutenverse-text-editor guten-VoDAIZ  animated guten-element-hide desktop-fadeIn"><div class="text-content-inner">
+
+<p>Every number tells a story of commitment, consistency, and impact. From successful projects to satisfied clients, our results reflect the time and our effort we invest in delivering quality solutions that drive real growth. These milestones aren’t just metrics—they’re proof of the trust our clients.</p>
+
+</div></div>
+
+<div class="section-wrapper" data-id="uYukKi"><section class="wp-block-gutenverse-section guten-element guten-section guten-uYukKi animated guten-element-hide desktop-fadeIn layout-fullwidth align-stretch"><div class="guten-container guten-column-gap-no">
+<div class="wp-block-gutenverse-column guten-element guten-column guten-RcFhoV"><div class="guten-column-wrapper" data-id="RcFhoV">
+<div class="guten-element guten-aoZYN5   guten-fun-fact align-center hover-from-left"><div class="fun-fact-inner"><div class="content block"><div class="number-wrapper"><span class="prefix"></span><span class="number loaded" data-number-format="" data-safe="350" data-number="" data-duration="3500" data-number-spaces="{&quot;Desktop&quot;:&quot;5&quot;,&quot;Mobile&quot;:&quot;2&quot;}"></span><span class="suffix"></span><sup class="super">+</sup></div><span class="title">Satisfied Clients</span></div></div></div>
+</div></div>
+
+<div class="wp-block-gutenverse-column guten-element guten-column guten-DARwyb"><div class="guten-column-wrapper" data-id="DARwyb">
+<div class="guten-element guten-ddprRu   guten-fun-fact align-center hover-from-left"><div class="fun-fact-inner"><div class="content block"><div class="number-wrapper"><span class="prefix"></span><span class="number loaded" data-number-format="" data-safe="120" data-number="" data-duration="3500" data-number-spaces="{&quot;Desktop&quot;:&quot;5&quot;,&quot;Mobile&quot;:&quot;2&quot;}"></span><span class="suffix"></span><sup class="super">K</sup></div><span class="title">Projects Completed</span></div></div></div>
+</div></div>
+</div></section></div>
+</div></div>
+</div></section></div>
+
+<div class="section-wrapper" data-id="XdnTy2"><section class="wp-block-gutenverse-section guten-element guten-section guten-XdnTy2 layout-boxed align-stretch"><div class="guten-container guten-column-gap-no">
+<div class="wp-block-gutenverse-column guten-element guten-column guten-T0HQok"><div class="guten-column-wrapper" data-id="T0HQok">
+<div class="section-wrapper" data-id="JNAxOU"><section class="wp-block-gutenverse-section guten-element guten-section guten-JNAxOU animated guten-element-hide desktop-fadeIn layout-fullwidth align-stretch"><div class="guten-container guten-column-gap-no">
+<div class="wp-block-gutenverse-column guten-element guten-column guten-gVW5hk"><div class="guten-column-wrapper" data-id="gVW5hk">
+<div class="wp-block-gutenverse-image guten-element guten-image guten-8m5AIF"><div class="guten-image-wrapper"><img class="gutenverse-image-box-filled" src="https://mashahzad.github.io/AGSwebsite/wp-content/themes/unibiz/assets/img/unibiz-client-1.webp" alt="" width="105" height="105" loading="lazy"></div></div>
+
+<div class="wp-block-gutenverse-image guten-element guten-image guten-9uZJPM"><div class="guten-image-wrapper"><img class="gutenverse-image-box-filled" src="https://mashahzad.github.io/AGSwebsite/wp-content/themes/unibiz/assets/img/unibiz-client-2.webp" alt="" width="140" height="141" loading="lazy"></div></div>
+
+<div class="wp-block-gutenverse-image guten-element guten-image guten-VyP9jP"><div class="guten-image-wrapper"><img class="gutenverse-image-box-filled" src="https://mashahzad.github.io/AGSwebsite/wp-content/themes/unibiz/assets/img/unibiz-client-3.webp" alt="" width="105" height="105" loading="lazy"></div></div>
+</div></div>
+</div></section></div>
+
+<div class="section-wrapper" data-id="MReORP"><section class="wp-block-gutenverse-section guten-element guten-section guten-MReORP animated guten-element-hide desktop-fadeIn layout-boxed align-stretch"><div class="guten-container guten-column-gap-no">
+<div class="wp-block-gutenverse-column guten-element guten-column guten-pj7mFg"><div class="guten-column-wrapper" data-id="pj7mFg">
+<div class="guten-element guten-testimonials no-margin guten-SC0RFD   style-1 quote-override arrow-layout-split arrow-position-default arrow-group-position-bottom-center"><div class="testimonials-list">
+            <div id="guten-SC0RFD" class="swiper-container" data-loop="true" data-autoplay="true" data-timeout="3200" data-nav="true" data-arrow="false" data-breakpoints="{&quot;0&quot;:{&quot;spaceBetween&quot;:10,&quot;slidesPerView&quot;:1},&quot;768&quot;:{&quot;spaceBetween&quot;:10,&quot;slidesPerView&quot;:1},&quot;1024&quot;:{&quot;spaceBetween&quot;:10,&quot;slidesPerView&quot;:1}}">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><div class="guten-testimonial-item">
+            <div class="testimonial-box hover-from-left"><div class="testimonial-slider hover-from-left testimonial-content">
+                    <div class="comment-bio">
+                        <div class="profile-image"><img width="900" height="497" loading="lazy" src="" alt="Noah Mitchell" data-image-placeholder="gutenverse-image-placeholder"></div>
+                        <ul class="rating-stars"></ul>
+                        <span class="profile-info"><strong class="profile-name">Noah Mitchell</strong><p class="profile-des">Digital Marketing</p></span>
+                    </div>
+                    <div class="comment-content">
+                        
+                        <p class="profile-comment">“Their marketing insights were spot on. From initial campaign planning to final execution, every step was seamless, strategic, and delivered measurable impact.”</p>
+                    </div>
+                </div></div>
+        </div></div><div class="swiper-slide"><div class="guten-testimonial-item">
+            <div class="testimonial-box hover-from-left"><div class="testimonial-slider hover-from-left testimonial-content">
+                    <div class="comment-bio">
+                        <div class="profile-image"><img width="900" height="497" loading="lazy" src="" alt="David Chen" data-image-placeholder="gutenverse-image-placeholder"></div>
+                        <ul class="rating-stars"></ul>
+                        <span class="profile-info"><strong class="profile-name">David Chen</strong><p class="profile-des">Startups Owner</p></span>
+                    </div>
+                    <div class="comment-content">
+                        
+                        <p class="profile-comment">“From concept to launch, their team was reliable and innovative. Their web development services turned our vision into a sleek, functional platform.”</p>
+                    </div>
+                </div></div>
+        </div></div><div class="swiper-slide"><div class="guten-testimonial-item">
+            <div class="testimonial-box hover-from-left"><div class="testimonial-slider hover-from-left testimonial-content">
+                    <div class="comment-bio">
+                        <div class="profile-image"><img width="900" height="497" loading="lazy" src="" alt="Sarah Anderson" data-image-placeholder="gutenverse-image-placeholder"></div>
+                        <ul class="rating-stars"></ul>
+                        <span class="profile-info"><strong class="profile-name">Sarah Anderson</strong><p class="profile-des">Brand Manager</p></span>
+                    </div>
+                    <div class="comment-content">
+                        
+                        <p class="profile-comment">“Their services are exceeded expectations. Setup was quick, customization was flexible, and the final site looked polished, professional, and ready to impress.”</p>
+                    </div>
+                </div></div>
+        </div></div>
+                </div>
+                <div class="swiper-pagination"></div>
+                
+            </div>
+        </div></div>
+</div></div>
+</div></section></div>
+</div></div>
+</div></section></div>
+
+<div class="section-wrapper" data-id="VXlbzT"><section class="wp-block-gutenverse-section guten-element guten-section guten-VXlbzT layout-boxed align-stretch"><div class="guten-container guten-column-gap-no">
+<div class="wp-block-gutenverse-column guten-element guten-column guten-EnbrPK"><div class="guten-column-wrapper" data-id="EnbrPK">
+<h2 class="wp-block-gutenverse-heading guten-element guten-EvhluN  animated guten-element-hide desktop-fadeIn">Catch Up on Our Latest Updates</h2>
+
+<div class="guten-dDVELj  animated guten-element-hide desktop-fadeIn  guten-post-block guten-element"><div class="gutenverse guten-postblock postblock-type-2 guten-pagination-disable  post-element guten-dDVELj" data-id="guten-dDVELj" data-settings="{&quot;elementId&quot;:&quot;guten-dDVELj&quot;,&quot;column&quot;:{&quot;Desktop&quot;:&quot;3&quot;,&quot;Tablet&quot;:&quot;1&quot;},&quot;excerptLength&quot;:&quot;9&quot;,&quot;readmoreEnabled&quot;:false,&quot;metaAuthorEnabled&quot;:false,&quot;metaDateIcon&quot;:&quot;&quot;,&quot;postblockType&quot;:&quot;type-2&quot;,&quot;postItemPadding&quot;:{&quot;Desktop&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;dimension&quot;:{&quot;top&quot;:&quot;10&quot;,&quot;right&quot;:&quot;10&quot;,&quot;bottom&quot;:&quot;22&quot;,&quot;left&quot;:&quot;10&quot;}}},&quot;postItemBorder&quot;:{&quot;radius&quot;:{&quot;Desktop&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;dimension&quot;:{&quot;top&quot;:&quot;16&quot;,&quot;right&quot;:&quot;16&quot;,&quot;bottom&quot;:&quot;16&quot;,&quot;left&quot;:&quot;16&quot;}}},&quot;all&quot;:{&quot;type&quot;:&quot;solid&quot;,&quot;width&quot;:1,&quot;color&quot;:{&quot;type&quot;:&quot;variable&quot;,&quot;id&quot;:&quot;gv-color-border&quot;}}},&quot;animation&quot;:{&quot;type&quot;:{&quot;Desktop&quot;:&quot;fadeIn&quot;},&quot;duration&quot;:&quot;normal&quot;,&quot;delay&quot;:200},&quot;inheritQuery&quot;:true,&quot;postType&quot;:&quot;post&quot;,&quot;numberPost&quot;:3,&quot;postOffset&quot;:0,&quot;excludeCurrentPost&quot;:false,&quot;includePost&quot;:[],&quot;excludePost&quot;:[],&quot;includeCategory&quot;:[],&quot;excludeCategory&quot;:[],&quot;includeAuthor&quot;:[],&quot;includeTag&quot;:[],&quot;excludeTag&quot;:[],&quot;htmlTag&quot;:&quot;h3&quot;,&quot;categoryEnabled&quot;:true,&quot;categoryPosition&quot;:&quot;center&quot;,&quot;excerptEnabled&quot;:true,&quot;excerptMore&quot;:&quot;...&quot;,&quot;readmoreIcon&quot;:&quot;fas fa-arrow-right&quot;,&quot;readmoreIconPosition&quot;:&quot;after&quot;,&quot;readmoreText&quot;:&quot;Read More&quot;,&quot;commentEnabled&quot;:false,&quot;commentIcon&quot;:&quot;fas fa-comment&quot;,&quot;commentIconPosition&quot;:&quot;before&quot;,&quot;metaEnabled&quot;:true,&quot;metaAuthorByText&quot;:&quot;by&quot;,&quot;metaAuthorIcon&quot;:&quot;fas fa-user&quot;,&quot;metaAuthorIconPosition&quot;:&quot;before&quot;,&quot;metaDateEnabled&quot;:true,&quot;metaDateType&quot;:&quot;published&quot;,&quot;metaDateFormat&quot;:&quot;default&quot;,&quot;metaDateFormatCustom&quot;:&quot;&quot;,&quot;metaDateIconPosition&quot;:&quot;before&quot;,&quot;breakpoint&quot;:&quot;tablet&quot;,&quot;noContentText&quot;:&quot;No Content&quot;,&quot;paginationMode&quot;:&quot;disable&quot;,&quot;paginationLoadmoreText&quot;:&quot;Load More&quot;,&quot;paginationLoadingText&quot;:&quot;Loading...&quot;,&quot;paginationNumberPost&quot;:3,&quot;paginationScrollLimit&quot;:0,&quot;paginationIcon&quot;:&quot;&quot;,&quot;paginationIconType&quot;:&quot;icon&quot;,&quot;paginationIconSVG&quot;:&quot;&quot;,&quot;paginationIconPosition&quot;:&quot;before&quot;,&quot;background&quot;:[],&quot;backgroundHover&quot;:[],&quot;paginationPrevNextText&quot;:true,&quot;paginationPrevText&quot;:&quot;Prev&quot;,&quot;paginationNextText&quot;:&quot;Next&quot;,&quot;paginationPrevIcon&quot;:&quot;fas fa-chevron-left&quot;,&quot;paginationPrevIconType&quot;:&quot;icon&quot;,&quot;paginationNextIcon&quot;:&quot;fas fa-chevron-right&quot;,&quot;paginationNextIconType&quot;:&quot;icon&quot;,&quot;contentOrder&quot;:[{&quot;label&quot;:&quot;Title&quot;,&quot;value&quot;:&quot;title&quot;},{&quot;label&quot;:&quot;Meta&quot;,&quot;value&quot;:&quot;meta&quot;},{&quot;label&quot;:&quot;Excerpt&quot;,&quot;value&quot;:&quot;excerpt&quot;},{&quot;label&quot;:&quot;Read More&quot;,&quot;value&quot;:&quot;read&quot;}],&quot;paginationLoadmoreAnimation&quot;:&quot;&quot;,&quot;paginationLoadmoreAnimationSequence&quot;:&quot;&quot;,&quot;paged&quot;:1,&quot;class&quot;:null}"><div class="guten-block-container">
+            <div class="guten-empty">No Content</div>
+        </div></div></div>
+</div></div>
+</div></section></div>
+
+<div class="wp-block-template-part"><div class="section-wrapper" data-id="0qUeAL"><section class="wp-block-gutenverse-section guten-element guten-section guten-0qUeAL layout-boxed align-stretch"><div class="guten-container guten-column-gap-no">
+<div class="wp-block-gutenverse-column guten-element guten-column guten-b7STfC"><div class="guten-column-wrapper" data-id="b7STfC">
+<div class="wp-block-gutenverse-wrapper guten-element guten-wrap-helper no-margin guten-UcxWJH  flex"><div class="guten-inner-wrap" data-id="UcxWJH">
+<h2 class="wp-block-gutenverse-heading guten-element guten-ZV4l34">Transform Your Online Presence and Achieve Lasting Growth</h2>
+
+<div class="guten-element gutenverse-text-editor guten-iw2WdX"><div class="text-content-inner">
+
+<p>Elevate your brand, attract the right audience, and drive sustainable growth with a powerful online presence.</p>
+
+</div></div>
+
+<div class="guten-element guten-button-wrapper guten-FaTAJu"><a class="guten-button guten-button-sm" href="#"><span>Make a Website</span></a></div>
+</div></div>
+
+<div class="section-wrapper" data-id="FImVnL"><section class="wp-block-gutenverse-section guten-element guten-section guten-FImVnL layout-boxed align-stretch"><div class="guten-container guten-column-gap-no">
+<div class="wp-block-gutenverse-column guten-element guten-column guten-ebzPrR"><div class="guten-column-wrapper" data-id="ebzPrR">
+<div class="wp-block-gutenverse-image guten-element guten-image guten-IM7Mdo"><a class="guten-image-wrapper" href="https://www.ags-sg.com/" target="_self"><img decoding="async" class="gutenverse-image-box-filled" src="https://mashahzad.github.io/AGSwebsite/wp-content/uploads/2026/05/1739371867874.png" alt="" width="561" height="207" loading="lazy"></a></div>
+
+<div class="guten-element gutenverse-text-editor guten-maSRW2"><div class="text-content-inner">
+
+<p>Powered by <a href="http://github.com/mashahzad" target="_blank" rel="noreferrer noopener">Mars</a>.</p>
+
+
+
+<p> All rights reserved.</p>
+
+</div></div>
+</div></div>
+
+<div class="wp-block-gutenverse-column guten-element guten-column guten-gmUWaB"><div class="guten-column-wrapper" data-id="gmUWaB">
+<div class="section-wrapper" data-id="mfneqx"><section class="wp-block-gutenverse-section guten-element guten-section guten-mfneqx layout-boxed align-stretch"><div class="guten-container guten-column-gap-no">
+<div class="wp-block-gutenverse-column guten-element guten-column guten-sSYoNR"><div class="guten-column-wrapper" data-id="sSYoNR">
+<h6 class="wp-block-gutenverse-heading guten-element guten-5141Dn">Company</h6>
+
+<div class="guten-element guten-icon-list guten-m96OWW"><div class=" list-wrapper ">
+<div class="guten-element guten-icon-list-item guten-oQkIVZ"><div class="list-divider"></div><a id="guten-oQkIVZ" href="#"><span class="list-text no-icon">Affiliates</span></a></div>
+
+<div class="guten-element guten-icon-list-item guten-IzoEQJ"><div class="list-divider"></div><a id="guten-IzoEQJ" href="#"><span class="list-text no-icon">Community</span></a></div>
+
+<div class="guten-element guten-icon-list-item guten-iOMhsH"><div class="list-divider"></div><a id="guten-iOMhsH" href="#"><span class="list-text no-icon">Services</span></a></div>
+
+<div class="guten-element guten-icon-list-item guten-VtdZ4m"><div class="list-divider"></div><a id="guten-VtdZ4m" href="#"><span class="list-text no-icon">About</span></a></div>
+</div></div>
+</div></div>
+
+<div class="wp-block-gutenverse-column guten-element guten-column guten-o6e4w1"><div class="guten-column-wrapper" data-id="o6e4w1">
+<h6 class="wp-block-gutenverse-heading guten-element guten-PBCCDt">About</h6>
+
+<div class="guten-element guten-icon-list guten-Zhh6GJ"><div class=" list-wrapper ">
+<div class="guten-element guten-icon-list-item guten-3WJcft"><div class="list-divider"></div><a id="guten-3WJcft" href="#"><span class="list-text no-icon">Blog</span></a></div>
+
+<div class="guten-element guten-icon-list-item guten-bhCCG9"><div class="list-divider"></div><a id="guten-bhCCG9" href="#"><span class="list-text no-icon">About Us</span></a></div>
+
+<div class="guten-element guten-icon-list-item guten-mbwv6k"><div class="list-divider"></div><a id="guten-mbwv6k" href="#"><span class="list-text no-icon">Projects</span></a></div>
+
+<div class="guten-element guten-icon-list-item guten-vRiLQi"><div class="list-divider"></div><a id="guten-vRiLQi" href="#"><span class="list-text no-icon">Careers</span></a></div>
+</div></div>
+</div></div>
+
+<div class="wp-block-gutenverse-column guten-element guten-column guten-aF1MSG"><div class="guten-column-wrapper" data-id="aF1MSG">
+<h6 class="wp-block-gutenverse-heading guten-element guten-H68iDG">Terms</h6>
+
+<div class="guten-element guten-icon-list guten-vGBs7x"><div class=" list-wrapper ">
+<div class="guten-element guten-icon-list-item guten-Zxrbv5"><div class="list-divider"></div><a id="guten-Zxrbv5" href="#"><span class="list-text no-icon">Privacy Policy</span></a></div>
+
+<div class="guten-element guten-icon-list-item guten-JdCDpA"><div class="list-divider"></div><a id="guten-JdCDpA" href="#"><span class="list-text no-icon">Terms and Conditions</span></a></div>
+
+<div class="guten-element guten-icon-list-item guten-JJfupN"><div class="list-divider"></div><a id="guten-JJfupN" href="#"><span class="list-text no-icon">Refund Policy</span></a></div>
+
+<div class="guten-element guten-icon-list-item guten-uUBNaT"><div class="list-divider"></div><a id="guten-uUBNaT" href="#"><span class="list-text no-icon">FAQ</span></a></div>
+</div></div>
+</div></div>
+</div></section></div>
+</div></div>
+</div></section></div>
+</div></div>
+</div></section></div></div></div>
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/unibiz/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<script src="https://mashahzad.github.io/AGSwebsite/wp-content/themes/unibiz//assets/js/preset_script.js?ver=1.0.8" id="preset_script-js"></script>
+<script id="wp-block-template-skip-link-js-after">
+	( function() {
+		var skipLinkTarget = document.querySelector( 'main' ),
+			sibling,
+			skipLinkTargetID,
+			skipLink;
+
+		// Early exit if a skip-link target can't be located.
+		if ( ! skipLinkTarget ) {
+			return;
+		}
+
+		/*
+		 * Get the site wrapper.
+		 * The skip-link will be injected in the beginning of it.
+		 */
+		sibling = document.querySelector( '.wp-site-blocks' );
+
+		// Early exit if the root element was not found.
+		if ( ! sibling ) {
+			return;
+		}
+
+		// Get the skip-link target's ID, and generate one if it doesn't exist.
+		skipLinkTargetID = skipLinkTarget.id;
+		if ( ! skipLinkTargetID ) {
+			skipLinkTargetID = 'wp--skip-link--target';
+			skipLinkTarget.id = skipLinkTargetID;
+		}
+
+		// Create the skip link.
+		skipLink = document.createElement( 'a' );
+		skipLink.classList.add( 'skip-link', 'screen-reader-text' );
+		skipLink.id = 'wp-skip-link';
+		skipLink.href = '#' + skipLinkTargetID;
+		skipLink.innerText = 'Skip to content';
+
+		// Inject the skip link.
+		sibling.parentElement.insertBefore( skipLink, sibling );
+	}() );
+	
+//# sourceURL=wp-block-template-skip-link-js-after
+</script>
+<script id="gutenverse-frontend-event-js-extra">
+var GutenverseFrontendConfig = {"wpjson_url":"https://mashahzad.github.io/AGSwebsite/wp-json/","wpjson_nonce":"2e514cc3b6","wpjson_endpoint":"https://mashahzad.github.io/AGSwebsite/wp-admin/admin-ajax.php?action=rest-nonce","framework_asset":"https://mashahzad.github.io/AGSwebsite/wp-content/plugins/gutenverse/lib/framework/assets/","framework_version":"2.6.3","image_placeholder":"https://mashahzad.github.io/AGSwebsite/wp-content/plugins/gutenverse/lib/framework/assets/img/img-placeholder.jpg"};
+var GutenverseData = {"postId":"","homeUrl":"https://mashahzad.github.io/AGSwebsite","query":{"q_search":null},"settingsData":[],"activePlugins":["gutenverse-companion/gutenverse-companion.php","gutenverse/gutenverse.php","simply-static/simply-static.php"],"featuredImage":"https://mashahzad.github.io/AGSwebsite/wp-content/plugins/gutenverse/lib/framework/assets/img/img-placeholder.jpg","breakPoints":{"Tablet":1024,"Mobile":767}};
+//# sourceURL=gutenverse-frontend-event-js-extra
+</script>
+<script src="https://mashahzad.github.io/AGSwebsite/wp-content/plugins/gutenverse/lib/framework/assets/js/corefrontend.js?ver=2.6.3" id="gutenverse-frontend-event-js"></script>
+<script src="https://mashahzad.github.io/AGSwebsite/wp-content/plugins/gutenverse/assets/js/frontend/client-logo.js?ver=3.6.3" id="gutenverse-frontend-client-logo-script-js"></script>
+<script src="https://mashahzad.github.io/AGSwebsite/wp-content/plugins/gutenverse/lib/framework/assets/js/frontend/animejs.js?ver=2.6.3" id="gutenverse-dep-animejs-script-js"></script>
+<script src="https://mashahzad.github.io/AGSwebsite/wp-content/plugins/gutenverse/assets/js/frontend/fun-fact.js?ver=3.6.3" id="gutenverse-frontend-fun-fact-script-js"></script>
+<script src="https://mashahzad.github.io/AGSwebsite/wp-content/plugins/gutenverse/assets/js/frontend/nav-menu.js?ver=3.6.3" id="gutenverse-frontend-nav-menu-script-js"></script>
+<script src="https://mashahzad.github.io/AGSwebsite/wp-content/plugins/gutenverse/assets/js/frontend/postblock.js?ver=3.6.3" id="gutenverse-frontend-postblock-script-js"></script>
+<script src="https://mashahzad.github.io/AGSwebsite/wp-content/plugins/gutenverse/assets/js/frontend/testimonials.js?ver=3.6.3" id="gutenverse-frontend-testimonials-script-js"></script>
+<script src="https://mashahzad.github.io/AGSwebsite/wp-content/plugins/gutenverse/lib/framework/assets/js/frontend/animation-basic.js?ver=2.6.3" id="gutenverse-core-frontend-animation-basic-script-js"></script>
+<script id="wp-emoji-settings" type="application/json">
+{"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"https://mashahzad.github.io/AGSwebsite/wp-includes/js/wp-emoji-release.min.js?ver=6.9.4"}}
+</script>
+<script type="module">
+/*! This file is auto-generated */
+const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(window._wpemojiSettings=a,"wpEmojiSettingsSupports"),s=["flag","emoji"];function i(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function c(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0);const a=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);return t.every((e,t)=>e===a[t])}function p(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var n=e.getImageData(16,16,1,1);for(let e=0;e<n.data.length;e++)if(0!==n.data[e])return!1;return!0}function u(e,t,n,a){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!a(e,"\ud83e\u1fac8")}return!1}function f(e,t,n,a){let r;const o=(r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):document.createElement("canvas")).getContext("2d",{willReadFrequently:!0}),s=(o.textBaseline="top",o.font="600 32px Arial",{});return e.forEach(e=>{s[e]=t(o,e,n,a)}),s}function r(e){var t=document.createElement("script");t.src=e,t.defer=!0,document.head.appendChild(t)}a.supports={everything:!0,everythingExceptFlag:!0},new Promise(t=>{let n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),c.toString(),p.toString()].join(",")+"));",a=new Blob([e],{type:"text/javascript"});const r=new Worker(URL.createObjectURL(a),{name:"wpTestEmojiSupports"});return void(r.onmessage=e=>{i(n=e.data),r.terminate(),t(n)})}catch(e){}i(n=f(s,u,c,p))}t(n)}).then(e=>{for(const n in e)a.supports[n]=e[n],a.supports.everything=a.supports.everything&&a.supports[n],"flag"!==n&&(a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&a.supports[n]);var t;a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&!a.supports.flag,a.supports.everything||((t=a.source||{}).concatemoji?r(t.concatemoji):t.wpemoji&&t.twemoji&&(r(t.twemoji),r(t.wpemoji)))});
+//# sourceURL=https://mashahzad.github.io/AGSwebsite/wp-includes/js/wp-emoji-loader.min.js
+</script>
+</body>
+</html>
